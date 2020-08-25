@@ -1,13 +1,70 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
 }
 
 
-
-.container{
-
-    
-    
+.wrapper{
+    margin: 0 auto;
+    max-width: 60rem;
+    width: 100%;
 }
 
+
+/* image will get as big as its container but wont get squishy or weird wide */
+.img-wrapper{
+    width:100%; 
+}
+
+.img-wrapper img{
+    height: auto;
+    width: 100%;    
+}
+
+.modal-overlay{
+    /* lock to nearest parent div */
+    background-color: rgba(27, 27, 27, 0.4);
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    z-index:9999;
+    display: none;
+}
+
+
+.modal-overlay.open{
+    display: flex;
+}
+
+.modal-content{
+    background-color: rgb(233, 229, 229);
+    border-radius: 6px;
+    /* centering */
+    margin: auto;
+    max-width: 25rem;
+    padding: 15px;
+    position: relative;
+    z-index: 10000;
+
+}
+
+.modal-close{
+    border:black 1px solid;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: rgb(197, 65, 65);
+    padding: 1px;
+    margin:2px;
+    border-radius: 100%;
+    font-size:10px;
+}

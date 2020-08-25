@@ -3,6 +3,8 @@ const chuckSays = document.getElementById
     ('chuckSays');
 const Button = document.getElementById('refreshQuote');
 const submitFormButton = document.getElementById("submitForm")
+const modalOverlay = document.querySelector('.modal-overlay')
+const modalClose = document.getElementById('closeModal')
 
 let category = "dev";
 
@@ -10,7 +12,8 @@ let category = "dev";
 const getQuote = () => {
     const url = `https://api.chucknorris.io/jokes/random?category=${category}`;
     get(url).then(function (response) {
-        chuckSays.innerHTML = response.value
+        chuckSays.innerHTML = response.value;
+        modalOverlay.classList.toggle('open');
     })
 }
 
@@ -49,6 +52,15 @@ getChuckQuotes.addEventListener('submit', e => {
     getQuote();
 
 });
+
+modalClose.addEventListener('click', function(e){
+    modalOverlay.classList.toggle('open');
+});
+
+
+
+
+
 /// This is getting API data on page load
 (function () {
     getCategories();

@@ -11,11 +11,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <p id="chuckSays">
-
-        </p>
-
+    <div class="wrapper">
+        
+        <img class="img-wrapper" src="styles/Chucky.jpg">
         <button id="refreshQuote">
             Refresh Quote
         </button>
@@ -31,6 +29,12 @@
             <button type="submit" id="submitForm">Get a quote</button>
         </form>
 
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModal" class="modal-close">X</span>
+            <p id="chuckSays"></p>
+        </div>
     </div>
 
     <script src='scripts/get.js'></script>
