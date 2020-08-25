@@ -6,23 +6,7 @@
 
 
 .container{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    width: 375px;
-    height: 817px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
-    font-size: 25px;
-    color: black
-    
+
     
     
 }
