@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Chuck Says</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-    
+
 </head>
+
 <body>
-    
-    <p id="chuckSays"> 
-        This is an empty p tag
-    </p>
+    <div class="container">
+        <p id="chuckSays">
 
-    <button id="refreshQuote">
-        Refresh Quote
-    </button>
+        </p>
 
-    <form>
+        <button id="refreshQuote">
+            Refresh Quote
+        </button>
 
-    </form>
+        <form>
+            <label>
+                Choose a category: 
+                <input type="text" value="" id="categoryInput" name="categoryInput" required placeholder="Type in a category name..." />
+            </label>
+            <button type="submit" id="submitForm">Get a quote</button>
+        </form>
+
+    </div>
+
+    <script src='scripts/get.js'></script>
     <script src='scripts/main.js'></script>
 </body>
+
 </html>
